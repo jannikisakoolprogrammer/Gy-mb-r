@@ -1,3 +1,7 @@
+import tkinter
+import tkinter.ttk
+
+
 class PresenterRoot(object):
 
 	def __init__(self,

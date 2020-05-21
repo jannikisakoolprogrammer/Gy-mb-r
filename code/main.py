@@ -1,4 +1,6 @@
 import tkinter
+import tkinter.ttk
+
 
 from code.classes.presenters.PresenterRoot import PresenterRoot
 from code.classes.views.ViewRoot import ViewRoot
