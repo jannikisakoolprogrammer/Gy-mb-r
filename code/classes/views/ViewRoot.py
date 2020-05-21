@@ -92,8 +92,30 @@ class ViewRoot(tkinter.Frame):
 			column = 2,
 			sticky = "nsew")		
 		
-		# Add a button.
-		self.frame_center_button_new = tkinter.Button(
+		# Szótár
+		self.frame_center_button_dictionary = tkinter.Button(
 			self.frame_right,
-			text = "Szia")
-		self.frame_center_button_new.pack()
+			text = "Szótár")
+		self.frame_center_button_dictionary.pack(
+			fill = tkinter.X)
+		
+		# Egyik ötből
+		self.frame_center_button_one_out_of_five = tkinter.Button(
+			self.frame_right,
+			text = "Egyik ötből")
+		self.frame_center_button_one_out_of_five.pack(
+			fill = tkinter.X)
+		
+		# Egyik a másik után.
+		self.frame_right_buitton_one_after_the_other = tkinter.Button(
+			self.frame_right,
+			text = "Egyik a másik után")
+		self.frame_right_buitton_one_after_the_other.pack(
+			fill = tkinter.X)
+		
+		# Gyakorlat teszi a mestért.
+		self.frame_right_button_practice_makes_perfect = tkinter.Button(
+			self.frame_right,
+			text = "Gyakorlat teszi a mestért")
+		self.frame_right_button_practice_makes_perfect.pack(
+			fill = tkinter.X)
