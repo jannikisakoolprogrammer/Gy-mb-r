@@ -1,3 +1,8 @@
-class ModelRoot():
+from code.classes.Database import Database
+from code.classes.models.Model import Model
+
+class ModelRoot(Model):
 	def __init__(self):
-		pass
+		super(
+			ModelRoot,
+			self).__init__()
