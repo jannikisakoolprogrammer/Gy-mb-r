@@ -1,11 +1,10 @@
-from code.classes.Database import Database
 from code.classes.models.Model import Model
-
-from code.constants.Root import ConstantsRoot as CONSTANTSROOT
 
 
 class ModelRoot(Model):
-	def __init__(self):
+	def __init__(
+		self,
+		_database):
 		super(
 			ModelRoot,
-			self).__init__()
+			self).__init__(_database)

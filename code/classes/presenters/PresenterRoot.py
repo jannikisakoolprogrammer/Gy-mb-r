@@ -3,21 +3,35 @@ import tkinter.ttk
 
 from code.constants.Root import ConstantsRoot as CONSTANTSROOT
 
+from code.classes.presenters.Presenter import Presenter
 
-class PresenterRoot(object):
+# NewDictionaryDialog
+from code.classes.presenters.PresenterNewDictionaryDialog \
+	import PresenterNewDictionaryDialog
+from code.classes.views.ViewNewDictionaryDialog \
+	import ViewNewDictionaryDialog
+from code.classes.models.ModelNewDictionaryDialog \
+	import ModelNewDictionaryDialog
+
+
+class PresenterRoot(Presenter):
 
 	def __init__(self,
 		_view,
 		_model):
 		
-		self.view = _view
-		self.model = _model
+		super(
+			PresenterRoot,
+			self).__init__(
+				_view,
+				_model)
+
 		
 		# Előállítom az eventhandlereket.
 		# Új nyelvnek:
 		self.view.tkinter_menu_file.entryconfig(
 			"Új nyelv",
-			command = self.test)
+			command = self.new)
 		
 		# Nyit nyelvnek:
 		self.view.tkinter_menu_file.entryconfig(
@@ -30,12 +44,16 @@ class PresenterRoot(object):
 			command = self.view.master.destroy)
 
 			
-	def test(self):
-		print("Új nyelv gombot.")
+	def new(self):
+		view_local = ViewNewDictionaryDialog(self.view)
+		model_local = ModelNewDictionaryDialog(self.model.database)
+		presenter_local = PresenterNewDictionaryDialog(
+			view_local,
+			model_local,
+			self)
+		presenter_local.run()
+		#print("Új nyelv gombot.")
 
 		
 	def open(self):
 		print("Nyit nyelv gombot.")
-	
-	def run(self):
-		self.view.mainloop()
