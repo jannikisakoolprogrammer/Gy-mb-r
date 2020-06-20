@@ -1,7 +1,7 @@
 import tkinter
 import tkinter.ttk
 
-#from code.constants.Root import ConstantsRoot as CONSTANTSROOT
+from code.constants.Root import ConstantsRoot as CONSTANTSROOT
 
 
 class PresenterRoot(object):
@@ -23,6 +23,11 @@ class PresenterRoot(object):
 		self.view.tkinter_menu_file.entryconfig(
 			"Nyit nyelv",
 			command = self.open)
+			
+		# Ment gyömbernek:
+		self.view.tkinter_menu_file.entryconfig(
+			CONSTANTSROOT.EXIT_BUTTON,
+			command = self.view.master.destroy)
 
 			
 	def test(self):
@@ -31,7 +36,6 @@ class PresenterRoot(object):
 		
 	def open(self):
 		print("Nyit nyelv gombot.")
-	
 	
 	def run(self):
 		self.view.mainloop()

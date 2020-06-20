@@ -11,11 +11,35 @@ DATABASE_FILEPATH = os.path.join(
 	DATABASE_DIRECTORY,
 	DATABASE_NAME)	
 
-# Az táblázat a rendszeres beállításoknak.
+# A táblázat a rendszeres beállításoknak.
 TABLE_SYSTEM_SETTINGS = "system_settings"
 TABLE_SYSTEM_SETTINGS_CREATE = """
 CREATE TABLE IF NOT EXISTS %s (
 	system_language TEXT,
 	created_datetime TEXT,
 	modified_datetime TEXT) """ % (TABLE_SYSTEM_SETTINGS)
+	
+# Az a táblázat a nyelveknek.
+TABLE_LANGUAGE_MAPPING = "language_mapping"
+TABLE_LANGUAGE_MAPPING_CREATE = """
+CREATE TABLE IF NOT EXISTS %s (
+	id INTEGER,
+	source_language TEXT,
+	target_language TEXT,
+	created_datetime TEXT)""" % (TABLE_LANGUAGE_MAPPING)
+
+# Az a táblázat a szavaknak.
+TABLE_WORD_MAPPING = "word_mapping"
+TABLE_WORD_MAPPING_CREATE = """
+CREATE TABLE IF NOT EXISTS %s (
+	id INTEGER,
+	source_word TEXT,
+	target_word TEXT,
+	created_datetime TEXT,
+	modified_datetime TEXT,
+	language_mapping_id INTEGER,
+	FOREIGN KEY(language_mapping_id) REFERENCES %s(id))""" % (
+		TABLE_WORD_MAPPING,
+		TABLE_LANGUAGE_MAPPING)
+	
 
