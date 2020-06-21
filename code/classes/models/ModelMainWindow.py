@@ -1,10 +1,10 @@
 from code.classes.models.Model import Model
 
 
-class ModelRoot(Model):
+class ModelMainWindow(Model):
 	def __init__(
 		self,
 		_database):
 		super(
-			ModelRoot,
+			ModelMainWindow,
 			self).__init__(_database)

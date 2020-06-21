@@ -1,4 +1,5 @@
 import tkinter
+from tkinter import messagebox
 
 from code.classes.presenters.Presenter import Presenter
 
@@ -28,6 +29,8 @@ class PresenterDialog(Presenter):
 		self.view.button_cancel.bind(
 			"<Button-1>",
 			self.cancel_clicked)
+		
+		self.error_message = ""
 
 	
 	def run(self):
@@ -37,20 +40,39 @@ class PresenterDialog(Presenter):
 	def ok_clicked(
 		self,
 		_event = None):
-		if self.validate_input() == True:
+		
+		self.get_input()		
+		self.prepare_input()
+		
+		if ((self.validate_input() == True)
+		and (self.check_apply() == True)
+		and (self.apply() == True)):	
 			self.view.withdraw()
-			self.apply()
 			self.cancel_clicked()
 		else:
-			pass # Error msg.
+			tkinter.messagebox.showerror(
+				"Error",
+				self.error_message,
+				parent = self.view)
+	
+	def get_input(self):
+		pass
+	
+	
+	def prepare_input(self):
+		pass
 	
 	
 	def validate_input(self):
 		return True
 	
 	
+	def check_apply(self):
+		return True # Override this for db interactions.
+	
+	
 	def apply(self):
-		pass # Override this to send data to model and to handle the data there.
+		pass # Override this for db interactions.
 	
 	
 	def cancel_clicked(

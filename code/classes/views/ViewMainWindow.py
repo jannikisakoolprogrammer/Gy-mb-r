@@ -4,7 +4,7 @@ import tkinter.ttk
 from code.constants.Root import ConstantsRoot as CONSTANTSROOT
 
 
-class ViewRoot(tkinter.Frame):
+class ViewMainWindow(tkinter.Frame):
 	def __init__(self,
 		_master):
 		super().__init__(_master)

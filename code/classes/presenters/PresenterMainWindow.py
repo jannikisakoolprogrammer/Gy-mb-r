@@ -14,14 +14,14 @@ from code.classes.models.ModelNewDictionaryDialog \
 	import ModelNewDictionaryDialog
 
 
-class PresenterRoot(Presenter):
+class PresenterMainWindow(Presenter):
 
 	def __init__(self,
 		_view,
 		_model):
 		
 		super(
-			PresenterRoot,
+			PresenterMainWindow,
 			self).__init__(
 				_view,
 				_model)
