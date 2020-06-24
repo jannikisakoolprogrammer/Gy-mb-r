@@ -2,11 +2,11 @@ import tkinter
 import tkinter.ttk
 
 
-from code.classes.Database import Database
+from code.Database import Database
 
-from code.classes.presenters.PresenterMainWindow import PresenterMainWindow
-from code.classes.views.ViewMainWindow import ViewMainWindow
-from code.classes.models.ModelMainWindow import ModelMainWindow		
+from code.MainWindow.PresenterMainWindow import PresenterMainWindow
+from code.MainWindow.ViewMainWindow import ViewMainWindow
+from code.MainWindow.ModelMainWindow import ModelMainWindow
 
 
 
