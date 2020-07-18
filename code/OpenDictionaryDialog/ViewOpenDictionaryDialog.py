@@ -1,6 +1,6 @@
 import tkinter
 
-from code.ViewDialog import ViewDialog
+from code.Base.ViewDialog import ViewDialog
 
 from code.OpenDictionaryDialog import ConstantsOpenDictionaryDialog as CONSTANTSOPENDICTIONARYDIALOG
 

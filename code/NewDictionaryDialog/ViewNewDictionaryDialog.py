@@ -1,6 +1,9 @@
 import tkinter
 
-from code.ViewDialog import ViewDialog
+from code.Base.ViewDialog import ViewDialog
+
+from code.NewDictionaryDialog import NewDictionaryDialogConstants \
+as NEWDICTIONARYDIALOGCONSTANTS
 
 
 class ViewNewDictionaryDialog(ViewDialog):
@@ -22,7 +25,7 @@ class ViewNewDictionaryDialog(ViewDialog):
 		# Forrás nyelv
 		self.tk_label_source_language = tkinter.Label(
 			self.body,
-			text = "Forrás nyelv")
+			text = NEWDICTIONARYDIALOGCONSTANTS.SOURCE_LANGUAGE)
 		self.tk_label_source_language.pack()
 		
 		self.tk_entry_source_language = tkinter.Entry(self.body)
@@ -31,7 +34,7 @@ class ViewNewDictionaryDialog(ViewDialog):
 		# Cél nyelv
 		self.tk_label_target_language = tkinter.Label(
 			self.body,
-			text = "Cél nyelv")
+			text = NEWDICTIONARYDIALOGCONSTANTS.TARGET_LANGUAGE)
 		self.tk_label_target_language.pack()
 		
 		self.tk_entry_target_language = tkinter.Entry(self.body)

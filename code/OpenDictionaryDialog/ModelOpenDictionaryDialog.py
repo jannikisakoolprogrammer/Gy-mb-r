@@ -2,8 +2,8 @@ import tkinter
 
 import datetime
 
-from code.Model import Model
-from code import database_settings as DATABASE_SETTINGS
+from code.Base.Model import Model
+from code.Base import database_settings as DATABASE_SETTINGS
 
 class ModelOpenDictionaryDialog(Model):
 	def __init__(

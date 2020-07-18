@@ -1,4 +1,4 @@
-from code.Model import Model
+from code.Base.Model import Model
 
 
 class ModelMainWindow(Model):

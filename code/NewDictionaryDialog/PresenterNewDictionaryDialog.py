@@ -1,6 +1,9 @@
 import tkinter
 
-from code.PresenterDialog import PresenterDialog
+from code.Base.PresenterDialog import PresenterDialog
+
+from code.NewDictionaryDialog import NewDictionaryDialogConstants \
+as NEWDICTIONARYDIALOGCONSTANTS
 
 
 class PresenterNewDictionaryDialog(PresenterDialog):	
@@ -35,11 +38,11 @@ class PresenterNewDictionaryDialog(PresenterDialog):
 	def validate_input(self):
 		
 		if (len(self.source_language) == 0):
-			self.error_message = "Source language not filled."
+			self.error_message = NEWDICTIONARYDIALOGCONSTANTS.SOURCE_LANGUAGE_NOT_FILLED
 			return False
 		
 		if (len(self.target_language) == 0):
-			self.error_message = "Target language not filled."
+			self.error_message = NEWDICTIONARYDIALOGCONSTANTS.TARGET_LANGUAGE_NOT_FILLED
 			return False
 			
 		return True
@@ -52,8 +55,9 @@ class PresenterNewDictionaryDialog(PresenterDialog):
 			self.target_language)
 			
 		if found == True:
-			self.error_message = "Record already exists."
+			self.error_message = NEWDICTIONARYDIALOGCONSTANTS.RECORD_ALREADY_EXISTS
 			return False
+			
 		else:
 			return True
 	
@@ -65,6 +69,6 @@ class PresenterNewDictionaryDialog(PresenterDialog):
 			self.target_language)
 			
 		if ret == False:
-			self.error_message = "Failed to insert record."
+			self.error_message = NEWDICTIONARYDIALOGCONSTANTS.FAILED_TO_INSERT_RECORD
 		
 		return ret

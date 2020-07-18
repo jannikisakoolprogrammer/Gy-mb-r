@@ -2,7 +2,7 @@ import tkinter
 import tkinter.ttk
 
 
-from code.Database import Database
+from code.Base.Database import Database
 
 from code.MainWindow.PresenterMainWindow import PresenterMainWindow
 from code.MainWindow.ViewMainWindow import ViewMainWindow

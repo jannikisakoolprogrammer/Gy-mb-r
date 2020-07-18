@@ -2,8 +2,8 @@ import tkinter
 
 import datetime
 
-from code.Model import Model
-from code import database_settings as DATABASE_SETTINGS
+from code.Base.Model import Model
+from code.Base import database_settings as DATABASE_SETTINGS
 
 class ModelNewDictionaryDialog(Model):
 	def __init__(
@@ -75,23 +75,22 @@ class ModelNewDictionaryDialog(Model):
 		self.database.cursor.execute(
 			"""
 			INSERT INTO '%s' (
-				id,
 				source_language,
 				target_language,
 				created_datetime)
 			VALUES (
-				%s,
 				'%s',
 				'%s',
 				'%s')
 			""" % (
 				DATABASE_SETTINGS.TABLE_LANGUAGE_MAPPING,
-				1,
 				_source_language,
 				_target_language,
 				dt_isoformat))
 		
 		self.database.connection.commit()
+		
+		self.set_active_dictionary(self.database.cursor.lastrowid)		
 		
 		return True
 	
