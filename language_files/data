@@ -56,8 +56,8 @@ ez - das, dies
 hanem - sondern
 szám - Zahl; Nummer
 számok - Zahlen; Nummern
-Olvassa! - Lesen Sie!
-Folytassa a számsort! - Setzen Sie die Zahlenreihe fort!
+Olvassa - Lesen Sie
+Folytassa a számsort - Setzen Sie die Zahlenreihe fort
 telefonszám - Telefonnummer
 telefonszámok - Telefonnummern
 Hángy éves vagy? - Wie alt bist du?
@@ -103,7 +103,7 @@ melyik? - welche / welcher / welches?
 város - Stadt
 városok - Städte
 Magyarország - Ungarn
-Önöl hol laknak? - Wo wohnen Sie? (Mehrzahl)
+Önök hol laknak? - Wo wohnen Sie? (Mehrzahl)
 pszichológus - Psychologe
 riporter - Reporter; Reporterin
 riporterek - Reporter (Mehrzahl)
@@ -185,7 +185,7 @@ zuhányozók - Duschen
 kád - Badewanne
 kádak - Badewannen
 Mi ez? - Was ist das?
-Mik ezek? - Was ist das (Mehrzahl)
+Mik ezek? - Was ist das? (Mehrzahl)
 jobbra - rechts
 középen - in der Mitte
 elöl - vorn
@@ -205,7 +205,7 @@ telefonkönyv - Telefonbuch
 Egészségetekre! - Prost!
 Hogy tetszik? - Wie gefällt (es dir)?
 tetszik - gefällt
-Gyere be! - Komm herein!
+Gyere be - Komm herein
 nos - nun
 új - neu
 újak - neu (Mehrzahl)
@@ -223,7 +223,7 @@ gyere - komm
 ez - diese / dieser / dieses
 az - jene / jener / jenes
 milyen? - wie?
-milyenek - wie? (Mehrzahl)
+milyenek? - wie? (Mehrzahl)
 régi - alt
 régiek - alt (Mehrzahl)
 világos - hell
@@ -304,8 +304,8 @@ sétál - spazieren gehen
 vacsorászik - Abend essen
 kor - um
 Mikor?  - Wann?
-Hány órakor? - Um wie viel Uhr?
-Hánykor? - Um wie viel Uhr?
+Hány órakor? - Um wie viel Uhr? (Langform)
+Hánykor? - Um wie viel Uhr? (Kurzform)
 ma - heute
 szombat - Samstag
 szombatok - Samstage
@@ -368,7 +368,7 @@ utána - danach
 szeretnék - ich möchte
 amerikai - amerikanisch
 kezdődik - beginnen
-Menjünk - Gehen wir!
+Menjünk - Gehen wir
 találkozik - sich treffen
 elmegy - weggehen; ausgehen
 inkább - lieber
@@ -426,3 +426,145 @@ felvágottak - Aufschnitte
 üdítőitalok - Erfrischungsgetränke
 kolbász - Wurst
 kolbászok - Würste
+bor - Wein
+borok - Weine
+sör - Bier
+sörök - Biere
+tojás - Ei
+tojások - Eier
+virsli - Würstchen
+virslik - Würstchen (Mehrzahl)
+Mennyibe kerül? - Was kostet (das)?
+kérek - ich möchte
+kér - bitten
+forint - (ungarische Währung)
+deka - 10 Gramm
+belőle - davon; daraus
+Még valamit? - Noch etwas?
+Tessék parancsolni - Bitte schön
+cigaretta - Zigarette
+cigaretták - Zigaretten
+darab - Stück
+darabok - Stücke
+üveg - Flasche; Glas (als Material)
+üvegek - Falschen; Gläser (als Material)
+csomag - Packung; Paket
+csomagok - Packungen; Pakete
+körülbelül - ungefähr
+mit? - was?
+vesz - kaufen; nehmen
+német - deutsch
+turista - Tourist
+turisták - Touristen
+rúd - Stange
+tokaji - Tokajer (Wein)
+barackpálinka - Aprikosenschnaps
+mennyi? - wie viel?
+fizet - bezahlen
+gyerek - Kinder
+gyerekek - Kinder (Mehrzahl)
+vásárol - (ein)kaufen
+kell - muss man
+hoz - bringen; holen
+pénz - Geld
+szatyor - Einkaufstasche
+szatyrok - Einkaufstaschen
+anyu - Mutti
+nem baj - (es) macht doch nichts
+ha - wenn; falls
+csokoládé - Schokolade
+csokoládék - Schokoladen
+csak - nur; erst
+ebéd - Mittagessen
+ebédek - Mittagesse (Mehrzahl)
+után - nach
+szabad - darf man; ist erlaubt
+siet - sich beeilen
+vissza - zurück
+drágám - mein Schatz (Anrede)
+nincs - es gibt kein
+nincsenek - es gibt keine
+biztos - sicher(lich)
+talán - vielleicht
+sincs - es gibt auch kein
+sincsenek - es gibt auch keine
+legalább - wenigstens
+korty - Schluck
+kortyok - Schluck (Mehrzahl)
+Halá istennek - Gott sei Dank
+piac - Markt
+piacok - Märkte
+alma - Apfel
+almák - Äpfel
+körte - Brine
+körték - Birnen
+banán - Banane
+narancs - Orange
+barack - Aprikose
+szőlő - Weintraube
+cseresznye - Kirsche
+gyümölcs - Obst
+gyümölcsök - Obst (Mehrzahl)
+eper - Erdbeere
+zöldség - Gemüse
+zöldségek - Gemüse (Mehrzahl)
+burgonya - Kartoffel
+krumpli - Kartoffel
+paradicsom - Tomate
+paradicsomok - Tomaten
+hagyma - Zwiebel
+sárgarépa - Karotte
+sárgarépák - Karotten
+saláta - Salat
+saláták - Salate
+uborka - Gurke
+karfiol - Blumenkohl
+Mit tetszik kérni? - Was möchten Sie?
+több - mehr
+másik - der / die / das andere
+megfelel - entsprechen
+tessék - bitte
+kilója - das Kilo von den ...
+finom - fein; lecker
+finomak - fein; lecker (Mehrzahl)
+megkóstol - probieren; kosten
+Hogy a ... kilója? - Was kostet ein Kilo von den ...?
+más - etwas anderes
+szeret - mögen; lieben
+vegetáriánus - Vegetarier
+vegetáriánusok - Vegetarier (Mehrzahl)
+az újságárusnál - beim Zeitungshändler
+újságárus - Zeitungshändler
+újságárusok - Zeitungshändler (Mehrzahl)
+esti - Abend; abendlich
+estiek - Abend; abendlich (Mehrzahl)
+hírlap - Nachrichtenblatt
+hírlapok - Nachrichtenblätter
+pesti - Pester
+pestiek - Pester (Mehrzahl)
+műsor - Programm
+műsorok - Programme
+elfogyott - ausverkauft
+újság - Zeitung
+újságok - Zeitungen
+nemzet - Nation
+nemzetek - Nationen
+magyar - ungarisch
+népdal - Volkslied
+népdalok - Volkslieder
+hull - fallen
+szilva - Pflaume
+fa - Baum
+fák - Bäume
+tanya - Gehöft
+tanyák - Gehöfte
+ruca - Ente
+rucák - Enten
+derce - Kleie
+egyik ága - der eine Ast
+lehajlott - ist heruntergebogen
+az én rózsám - meine Rose; meine Liebste
+elhagyott - hat mich verlassen
+kalapom - mein Hut
+páva tolla - Pfauenfeder
+benne - darin
