@@ -49,6 +49,176 @@ class PresenterMainWindow(Presenter):
 		self.view.tk_entry_user_input.bind(
 			"<Return>",
 			self.check)
+			
+		self.view.tk_button_1.bind(
+			"<Button-1>",
+			self.add_letter_1)
+			
+		self.view.tk_button_2.bind(
+			"<Button-1>",
+			self.add_letter_2)
+
+		self.view.tk_button_3.bind(
+			"<Button-1>",
+			self.add_letter_3)
+			
+		self.view.tk_button_4.bind(
+			"<Button-1>",
+			self.add_letter_4)	
+			
+		self.view.tk_button_5.bind(
+			"<Button-1>",
+			self.add_letter_5)
+			
+		self.view.tk_button_6.bind(
+			"<Button-1>",
+			self.add_letter_6)	
+
+		self.view.tk_button_7.bind(
+			"<Button-1>",
+			self.add_letter_7)
+			
+		self.view.tk_button_8.bind(
+			"<Button-1>",
+			self.add_letter_8)	
+			
+		self.view.tk_button_9.bind(
+			"<Button-1>",
+			self.add_letter_9)			
+			
+		# Show number of entries of words
+		self.view.tk_label_number_of_entries.config(
+			text = "Number of entries: %s" % (self.model.get_number_of_entries()))
+		
+		# Update stats		
+		#self.view_update_stats()
+
+	
+	def add_letter_1(
+		self,
+		_event):
+	
+		user_input = tkinter.StringVar()
+		user_input.set(self.view.tk_entry_user_input.get() + "á")
+		
+		self.view.tk_entry_user_input.config(
+			text = user_input)
+			
+		self.view.tk_entry_user_input.icursor(
+			len(user_input.get()))
+			
+			
+	def add_letter_2(
+		self,
+		_event):
+	
+		user_input = tkinter.StringVar()
+		user_input.set(self.view.tk_entry_user_input.get() + "í")
+		
+		self.view.tk_entry_user_input.config(
+			text = user_input)
+			
+		self.view.tk_entry_user_input.icursor(
+			len(user_input.get()))
+			
+			
+	def add_letter_3(
+		self,
+		_event):
+	
+		user_input = tkinter.StringVar()
+		user_input.set(self.view.tk_entry_user_input.get() + "ó")
+		
+		self.view.tk_entry_user_input.config(
+			text = user_input)
+			
+		self.view.tk_entry_user_input.icursor(
+			len(user_input.get()))			
+
+
+	def add_letter_4(
+		self,
+		_event):
+	
+		user_input = tkinter.StringVar()
+		user_input.set(self.view.tk_entry_user_input.get() + "ú")
+		
+		self.view.tk_entry_user_input.config(
+			text = user_input)
+			
+		self.view.tk_entry_user_input.icursor(
+			len(user_input.get()))			
+
+
+	def add_letter_5(
+		self,
+		_event):
+	
+		user_input = tkinter.StringVar()
+		user_input.set(self.view.tk_entry_user_input.get() + "é")
+		
+		self.view.tk_entry_user_input.config(
+			text = user_input)
+			
+		self.view.tk_entry_user_input.icursor(
+			len(user_input.get()))			
+
+
+	def add_letter_6(
+		self,
+		_event):
+	
+		user_input = tkinter.StringVar()
+		user_input.set(self.view.tk_entry_user_input.get() + "ö")
+		
+		self.view.tk_entry_user_input.config(
+			text = user_input)
+			
+		self.view.tk_entry_user_input.icursor(
+			len(user_input.get()))			
+
+
+	def add_letter_7(
+		self,
+		_event):
+	
+		user_input = tkinter.StringVar()
+		user_input.set(self.view.tk_entry_user_input.get() + "ü")
+		
+		self.view.tk_entry_user_input.config(
+			text = user_input)
+			
+		self.view.tk_entry_user_input.icursor(
+			len(user_input.get()))			
+
+
+	def add_letter_8(
+		self,
+		_event):
+	
+		user_input = tkinter.StringVar()
+		user_input.set(self.view.tk_entry_user_input.get() + "ő")
+		
+		self.view.tk_entry_user_input.config(
+			text = user_input)
+			
+		self.view.tk_entry_user_input.icursor(
+			len(user_input.get()))			
+
+
+	def add_letter_9(
+		self,
+		_event):
+	
+		user_input = tkinter.StringVar()
+		user_input.set(self.view.tk_entry_user_input.get() + "ű")
+		
+		self.view.tk_entry_user_input.config(
+			text = user_input)	
+
+		self.view.tk_entry_user_input.icursor(
+			len(user_input.get()))
+			
 
 	
 	def load_next_word_pair(self):
@@ -63,11 +233,27 @@ class PresenterMainWindow(Presenter):
 		user_input = self.view.tk_entry_user_input.get()
 		
 		if user_input.lower() == self.model.target_word.lower():
+		#	self.model.increment_correct_guesses()
+		#else:
+		#	self.model.increment_incorrect_guesses()
+		
+		#	self.view_update_stats()
 			
 			self.view.tk_entry_user_input.delete(0, tkinter.END)
 			self.view.tk_entry_user_input.insert(0, "")
-			
+		
 			self.load_next_word_pair()
+	
+	
+	def view_update_stats(self):
+	
+		# Show number of correct guesses
+		self.view.tk_label_correct_guesses.config(
+			text = "Correct guesses: %s" % (self.model.get_correct_guesses()))
+			
+		# Show number of incorrect guesses
+		self.view.tk_label_incorrect_guesses.config(
+			text = "Incorrect guesses: %s" % (self.model.get_incorrect_guesses()))
 
 			
 	def new(self):

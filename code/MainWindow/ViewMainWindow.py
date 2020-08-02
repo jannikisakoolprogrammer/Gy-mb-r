@@ -51,9 +51,19 @@ class ViewMainWindow(tkinter.Frame):
 			self.tk_frame,
 			text = "Gyömbér",
 			font = (
-				"Font",
-				20))
+				"Arial",
+				30))
 		self.tk_label_heading.pack()
+		
+		# Subheading
+		self.tk_label_subheading = tkinter.Label(
+			self.tk_frame,
+			text = "Just a tool to learn Hungarian vocabulary =]",
+			font = (
+				"Arial",
+				12),
+			fg = "grey")
+		self.tk_label_subheading.pack()
 		
 		# Word to guess
 		self.tk_label_word_to_guess = tkinter.Label(
@@ -61,7 +71,7 @@ class ViewMainWindow(tkinter.Frame):
 		self.tk_label_word_to_guess.config(
 			font = (
 				"Arial",
-				30))
+				20))
 		self.tk_label_word_to_guess.pack()
 		
 		# User input
@@ -79,6 +89,135 @@ class ViewMainWindow(tkinter.Frame):
 			self.tk_frame,
 			text = "Check")
 		self.tk_button_check.pack()
+		
+		# Show number of entries
+		self.tk_label_number_of_entries = tkinter.Label(
+			self.tk_frame)
+		self.tk_label_number_of_entries.config(
+			font = (
+				"Arial",
+				14))
+		self.tk_label_number_of_entries.pack()
+		
+		# Buttons for hungarian only letters
+		self.tk_button_1 = tkinter.Button(
+			self.tk_frame,
+			text = "Á")
+		self.tk_button_1.config(
+			font = (
+				"Courier New",
+				14))
+		self.tk_button_1.pack(
+			side = tkinter.LEFT,
+			expand = True)
+		
+		self.tk_button_2 = tkinter.Button(
+			self.tk_frame,
+			text = "Í")
+		self.tk_button_2.config(
+			font = (
+				"Courier New",
+				14))			
+		self.tk_button_2.pack(
+			side = tkinter.LEFT,
+			expand = True)
+
+		self.tk_button_3 = tkinter.Button(
+			self.tk_frame,
+			text = "Ó")
+		self.tk_button_3.config(
+			font = (
+				"Courier New",
+				14))			
+		self.tk_button_3.pack(
+			side = tkinter.LEFT,
+			expand = True)
+		
+		self.tk_button_4 = tkinter.Button(
+			self.tk_frame,
+			text = "Ú")
+		self.tk_button_4.config(
+			font = (
+				"Courier New",
+				14))			
+		self.tk_button_4.pack(
+			side = tkinter.LEFT,
+			expand = True)
+		
+		self.tk_button_5 = tkinter.Button(
+			self.tk_frame,
+			text = "É")
+		self.tk_button_5.config(
+			font = (
+				"Courier New",
+				14))			
+		self.tk_button_5.pack(
+			side = tkinter.LEFT,
+			expand = True)	
+		
+		self.tk_button_6 = tkinter.Button(
+			self.tk_frame,
+			text = "Ö")
+		self.tk_button_6.config(
+			font = (
+				"Courier New",
+				14))			
+		self.tk_button_6.pack(
+			side = tkinter.LEFT,
+			expand = True)
+		
+		self.tk_button_7 = tkinter.Button(
+			self.tk_frame,
+			text = "Ü")
+		self.tk_button_7.config(
+			font = (
+				"Courier New",
+				14))			
+		self.tk_button_7.pack(
+			side = tkinter.LEFT,
+			expand = True)
+		
+		self.tk_button_8 = tkinter.Button(
+			self.tk_frame,
+			text = "Ő")
+		self.tk_button_8.config(
+			font = (
+				"Courier New",
+				14))			
+		self.tk_button_8.pack(
+			side = tkinter.LEFT,
+			expand = True)
+		
+		self.tk_button_9 = tkinter.Button(
+			self.tk_frame,
+			text = "Ű")
+		self.tk_button_9.config(
+			font = (
+				"Courier New",
+				14))			
+		self.tk_button_9.pack(
+			side = tkinter.LEFT,
+			expand = True)		
+		
+		# Show correct guesses
+		#self.tk_label_correct_guesses = tkinter.Label(
+	#		self.tk_frame)
+	#	self.tk_label_correct_guesses.config(
+	#		font = (
+	#			"Arial",
+	#			12),
+	#		fg = "green")
+	#	self.tk_label_correct_guesses.pack()
+		
+		# Show incorrect guesses
+	#	self.tk_label_incorrect_guesses = tkinter.Label(
+	#		self.tk_frame)
+	#	self.tk_label_incorrect_guesses.config(
+	#		font = (
+	#			"Arial",
+	#			12),
+	#		fg = "red")
+	#	self.tk_label_incorrect_guesses.pack()		
 				
 			
 			
