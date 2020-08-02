@@ -62,7 +62,7 @@ class PresenterMainWindow(Presenter):
 	def check(self, _e = None):
 		user_input = self.view.tk_entry_user_input.get()
 		
-		if user_input == self.model.target_word:
+		if user_input.lower() == self.model.target_word.lower():
 			
 			self.view.tk_entry_user_input.delete(0, tkinter.END)
 			self.view.tk_entry_user_input.insert(0, "")
