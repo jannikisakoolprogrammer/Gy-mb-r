@@ -19,4 +19,6 @@ def main():
 		view_main_window,
 		model_main_window)
 		
+	presenter_main_window.load_next_word_pair()
+		
 	presenter_main_window.run()

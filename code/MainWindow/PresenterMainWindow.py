@@ -41,34 +41,33 @@ class PresenterMainWindow(Presenter):
 			self).__init__(
 				_view,
 				_model)
-
 		
-		# Előállítom az eventhandlereket.
-		# Új nyelvnek:
-		self.view.tkinter_menu_file.entryconfig(
-			"Új nyelv",
-			command = self.new)
-		
-		# Nyit nyelvnek:
-		self.view.tkinter_menu_file.entryconfig(
-			"Nyit nyelv",
-			command = self.open)
-			
-		# Ment gyömbernek:
-		self.view.tkinter_menu_file.entryconfig(
-			CONSTANTSMAINWINDOW.EXIT_BUTTON,
-			command = self.view.master.destroy)
-		
-		# Nyit szótárat eventhandler:
-		self.view.frame_center_button_dictionary.bind(
+		self.view.tk_button_check.bind(
 			"<Button-1>",
-			self.tk_button_dictionary_clicked)
+			self.check)
 			
-		# Enable / disbale controls
-		self.view.frame_center_button_dictionary.configure(state = "disabled")
-		self.view.frame_center_button_one_out_of_five.configure(state = "disabled")
-		self.view.tk_frame_buitton_one_after_the_other.configure(state = "disabled")
-		self.view.tk_frame_button_practice_makes_perfect.configure(state = "disabled")
+		self.view.tk_entry_user_input.bind(
+			"<Return>",
+			self.check)
+
+	
+	def load_next_word_pair(self):
+	
+		self.model.next_word_pair()
+		
+		self.view.tk_label_word_to_guess.config(
+			text = self.model.source_word)
+	
+	
+	def check(self, _e = None):
+		user_input = self.view.tk_entry_user_input.get()
+		
+		if user_input == self.model.target_word:
+			
+			self.view.tk_entry_user_input.delete(0, tkinter.END)
+			self.view.tk_entry_user_input.insert(0, "")
+			
+			self.load_next_word_pair()
 
 			
 	def new(self):
@@ -123,7 +122,10 @@ class PresenterMainWindow(Presenter):
 		if self.view.frame_center_button_dictionary.cget("state") == "disabled":
 			return
 		
-		view_local = DictionaryWindowView(self.view)
+		view_local = DictionaryWindowView(
+			self.view,
+			"Szótár",
+			"grid")
 		model_local = DictionaryWindowModel(self.model.database)
 		presenter_local = DictionaryWindowPresenter(
 			view_local,

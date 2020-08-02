@@ -25,9 +25,6 @@ class ViewMainWindow(tkinter.Frame):
 		self.master = _master		
 		self.master.geometry("400x400")			
 		
-		# Menü
-		self.tk_menu_create()
-		
 		# Ablakok
 		self.tk_frame_create()
 		
@@ -40,78 +37,49 @@ class ViewMainWindow(tkinter.Frame):
 			fill = tkinter.BOTH)
 	
 	
-	def tk_menu_create(self):
-		# Elöszőr előállítom a gyökér menüt.
-		# Minden másik menük összekötik vele.
-		self.tkinter_menu = tkinter.Menu(self.master)
-		self.master.config(menu = self.tkinter_menu)
-		
-		# Most a fájl menüt előállítom.
-		self.tkinter_menu_file = tkinter.Menu(
-			self.tkinter_menu,
-			tearoff = 0)
-		
-		# Az 'Új nyelv' menü gombot a fájl menühoz hozzáfűzöm.
-		self.tkinter_menu_file.insert(
-			CONSTANTSMAINWINDOW.NEW_BUTTON,
-			"command",
-			label = "Új nyelv")
-			
-		# A 'Nyit nyelv' menü gombot a fájl menühoz hozzáfűzöm.
-		self.tkinter_menu_file.insert(
-			CONSTANTSMAINWINDOW.OPEN_BUTTON,
-			"command",
-			label = "Nyit nyelv")
-			
-		# A 'Ment' menü gombot a fájl menühoz hozzáfűzöm.
-		self.tkinter_menu_file.insert(
-			CONSTANTSMAINWINDOW.EXIT_BUTTON,
-			"command",
-			label = "Ment")			
-			
-			
-		# A 'fájl' menüt hozzáfűzöm.
-		self.tkinter_menu.add_cascade(
-			label = "Fájl",
-			menu = self.tkinter_menu_file)
-	
-	
 	def tk_frame_create(self):
 		self.tk_frame = tkinter.Frame(
-			self,
-			background = "khaki1")
-		self.tk_frame.grid(
-			row = 0,
-			column = 0,
-			sticky = "nsew")
+			self)
+		self.tk_frame.pack()
+		#self.tk_frame.grid(
+		#	row = 0,
+		#	column = 0,
+		#	sticky = "nsew")
 			
-		# Szótár
-		self.frame_center_button_dictionary = tkinter.Button(
+		# Gyömbér
+		self.tk_label_heading = tkinter.Label(
 			self.tk_frame,
-			text = "Szótár")
-		self.frame_center_button_dictionary.pack(
-			fill = tkinter.X)
+			text = "Gyömbér",
+			font = (
+				"Font",
+				20))
+		self.tk_label_heading.pack()
 		
-		# Egyik ötből
-		self.frame_center_button_one_out_of_five = tkinter.Button(
-			self.tk_frame,
-			text = "Egyik ötből")
-		self.frame_center_button_one_out_of_five.pack(
-			fill = tkinter.X)
+		# Word to guess
+		self.tk_label_word_to_guess = tkinter.Label(
+			self.tk_frame)
+		self.tk_label_word_to_guess.config(
+			font = (
+				"Arial",
+				30))
+		self.tk_label_word_to_guess.pack()
 		
-		# Egyik a másik után.
-		self.tk_frame_buitton_one_after_the_other = tkinter.Button(
-			self.tk_frame,
-			text = "Egyik a másik után")
-		self.tk_frame_buitton_one_after_the_other.pack(
-			fill = tkinter.X)
+		# User input
+		self.tk_entry_user_input = tkinter.Entry(
+			self.tk_frame)
+		self.tk_entry_user_input.config(
+			font = (
+				"Arial",
+				20),
+			justify = "center")
+		self.tk_entry_user_input.pack()
 		
-		# Gyakorlat teszi a mestért.
-		self.tk_frame_button_practice_makes_perfect = tkinter.Button(
+		# Check
+		self.tk_button_check = tkinter.Button(
 			self.tk_frame,
-			text = "Gyakorlat teszi a mestért")
-		self.tk_frame_button_practice_makes_perfect.pack(
-			fill = tkinter.X)				
+			text = "Check")
+		self.tk_button_check.pack()
+				
 			
 			
 	def configure_columns(self):
