@@ -68,4 +68,9 @@ class ModelMainWindow(Model):
 	def get_incorrect_guesses(self):
 		
 		return self.incorrect_guesses
+	
+	
+	def get_current_word_counter(self):
+	
+		return self.n_cur_entry
 		

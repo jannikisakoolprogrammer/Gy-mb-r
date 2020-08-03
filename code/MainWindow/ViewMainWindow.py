@@ -65,6 +65,25 @@ class ViewMainWindow(tkinter.Frame):
 			fg = "grey")
 		self.tk_label_subheading.pack()
 		
+		# Show number of entries
+		self.tk_label_number_of_entries = tkinter.Label(
+			self.tk_frame)
+		self.tk_label_number_of_entries.config(
+			font = (
+				"Arial",
+				14))
+		self.tk_label_number_of_entries.pack()
+		
+		# Show done entries.
+		self.tk_label_current = tkinter.Label(
+			self.tk_frame)
+		self.tk_label_current.config(
+			font = (
+				"Arial",
+				12))
+		self.tk_label_current.pack(
+			side = tkinter.TOP)		
+		
 		# Word to guess
 		self.tk_label_word_to_guess = tkinter.Label(
 			self.tk_frame)
@@ -88,16 +107,7 @@ class ViewMainWindow(tkinter.Frame):
 		self.tk_button_check = tkinter.Button(
 			self.tk_frame,
 			text = "Check")
-		self.tk_button_check.pack()
-		
-		# Show number of entries
-		self.tk_label_number_of_entries = tkinter.Label(
-			self.tk_frame)
-		self.tk_label_number_of_entries.config(
-			font = (
-				"Arial",
-				14))
-		self.tk_label_number_of_entries.pack()
+		self.tk_button_check.pack()		
 		
 		# Buttons for hungarian only letters
 		self.tk_button_1 = tkinter.Button(
@@ -198,6 +208,7 @@ class ViewMainWindow(tkinter.Frame):
 		self.tk_button_9.pack(
 			side = tkinter.LEFT,
 			expand = True)		
+
 		
 		# Show correct guesses
 		#self.tk_label_correct_guesses = tkinter.Label(

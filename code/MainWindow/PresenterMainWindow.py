@@ -90,6 +90,9 @@ class PresenterMainWindow(Presenter):
 		self.view.tk_label_number_of_entries.config(
 			text = "Number of entries: %s" % (self.model.get_number_of_entries()))
 		
+		# Show current word counter
+		self.view_update_current_word_counter()
+		
 		# Update stats		
 		#self.view_update_stats()
 
@@ -218,12 +221,20 @@ class PresenterMainWindow(Presenter):
 
 		self.view.tk_entry_user_input.icursor(
 			len(user_input.get()))
+	
+	
+	def view_update_current_word_counter(self):
+	
+		self.view.tk_label_current.config(
+			text = "Entries done: %d" % (self.model.get_current_word_counter()))	
 			
 
 	
 	def load_next_word_pair(self):
 	
 		self.model.next_word_pair()
+		
+		self.view_update_current_word_counter()
 		
 		self.view.tk_label_word_to_guess.config(
 			text = self.model.source_word)
@@ -243,6 +254,8 @@ class PresenterMainWindow(Presenter):
 			self.view.tk_entry_user_input.insert(0, "")
 		
 			self.load_next_word_pair()
+			
+			self.view_update_current_word_counter()
 	
 	
 	def view_update_stats(self):
