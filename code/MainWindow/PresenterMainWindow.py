@@ -1,8 +1,6 @@
 import tkinter
 import tkinter.ttk
 
-import code.MainWindow.ConstantsMainWindow as CONSTANTSMAINWINDOW
-
 from code.Base.Presenter import Presenter
 
 # NewDictionaryDialog
@@ -45,6 +43,10 @@ class PresenterMainWindow(Presenter):
 		self.view.tk_button_check.bind(
 			"<Button-1>",
 			self.check)
+			
+		self.view.tk_button_hint.bind(
+			"<Button-1>",
+			self.hint)
 			
 		self.view.tk_entry_user_input.bind(
 			"<Return>",
@@ -238,6 +240,14 @@ class PresenterMainWindow(Presenter):
 		
 		self.view.tk_label_word_to_guess.config(
 			text = self.model.source_word)
+		
+		# Enable hint button.
+		self.view.tk_button_hint.config(
+			state = tkinter.NORMAL)
+		
+		# Make hint blank.
+		self.view.tk_label_hint.config(
+			text = "")
 	
 	
 	def check(self, _e = None):
@@ -256,6 +266,36 @@ class PresenterMainWindow(Presenter):
 			self.load_next_word_pair()
 			
 			self.view_update_current_word_counter()
+	
+	
+	def hint(self, _E = None):
+		# Hint 1: Convert printable chars to underscores
+		# Other hints:  Turn one underscore into the printable char.
+		# Do this until the word is displayed.
+		
+		# Check if any more hints can be made:
+		if self.model.get_cur_hint() >= self.model.get_n_hints():	
+			# No more hints possible.
+			return
+		else:
+			if self.model.get_cur_hint() == 0:
+				# Show masked word first.
+				self.view.tk_label_hint.config(
+					text = self.model.get_hint_word())
+			else:
+				# Reveal one printable char.
+				self.model.reveal_char()
+				self.view.tk_label_hint.config(
+					text = self.model.get_hint_word())
+				
+			self.model.increment_cur_hint()
+			
+			if self.model.get_cur_hint() >= self.model.get_n_hints():
+				# Deactivate Hint button.
+				self.view.tk_button_hint.config(
+					state = tkinter.DISABLED)
+		
+		
 	
 	
 	def view_update_stats(self):

@@ -27,6 +27,13 @@ class ModelMainWindow(Model):
 		
 		self.correct_guesses = 0
 		self.incorrect_guesses = 0
+		
+		self.n_printable_chars = 0		
+		self.hint_word = None
+		self.n_hints = 0
+		self.cur_hint = 0
+		
+		self._printable_chars_positions = []
 
 	
 	def next_word_pair(self):
@@ -43,6 +50,68 @@ class ModelMainWindow(Model):
 		
 		self.source_word = chosen_entry.split("-")[1].strip()
 		self.target_word = chosen_entry.split("-")[0].strip()
+		
+		self.prepare_hint()
+	
+	
+	def prepare_hint(self):
+	
+		self.n_printable_chars = 0
+		self._printable_chars_positions = []
+		cur_pos = 0
+		for c in self.target_word:
+			if c.isprintable():
+				self.n_printable_chars += 1
+				self._printable_chars_positions.append(
+					cur_pos)
+			cur_pos += 1
+		
+
+		self.hint_word = ""
+		for c in self.target_word:
+			if c.isspace():
+				self.hint_word += " "
+			else:
+				self.hint_word += "*"
+		
+		self.n_hints = self.n_printable_chars + 1 # 1 is show masked word.
+		self.cur_hint = 0
+	
+	
+	def reveal_char(self):
+		pop_index = random.choice(
+			self._printable_chars_positions)
+
+		self._printable_chars_positions.remove(pop_index)
+		
+		self.hint_word = self.hint_word[:pop_index] + \
+			self.target_word[pop_index] + \
+			self.hint_word[pop_index + 1:]
+	
+	
+	def get_cur_hint(self):
+	
+		return self.cur_hint
+	
+	
+	def increment_cur_hint(self):
+		
+		self.cur_hint += 1
+	
+	
+	def get_n_hints(self):
+	
+		return self.n_hints
+	
+	
+	def get_hint_word(self):
+	
+		return self.hint_word
+	
+	
+	def get_n_printable_chars(self):
+		
+		return self.n_printable_chars
 	
 	
 	def get_number_of_entries(self):
