@@ -21,12 +21,13 @@ class ViewMainWindow(tkinter.Frame):
 		
 		# Master
 		self.master = _master		
+		#self.master.minsize(600, 400)
 		#self.master.geometry("800x300")	
 		
 		# Ablakok
 		self.tk_frame_create()
 		
-		self.configure_columns()
+		#self.configure_columns()
 		#self.configure_rows()
 		
 		# Pack all controls.
@@ -53,9 +54,7 @@ class ViewMainWindow(tkinter.Frame):
 		self.tk_label_heading.grid(
 			row = 0,
 			column = 0,
-			rowspan = 5,
-			sticky = "n",
-			)
+			columnspan = 9)
 		
 		# Subheading
 		self.tk_label_subheading = tkinter.Label(
@@ -68,9 +67,8 @@ class ViewMainWindow(tkinter.Frame):
 		self.tk_label_subheading.grid(
 			row = 1,
 			column = 0,
-			rowspan = 4,
-			sticky = "n",
-			pady = "10")
+			columnspan = 9,
+			sticky = "n")
 		
 		# Show number of entries
 		self.tk_label_number_of_entries = tkinter.Label(
@@ -81,8 +79,8 @@ class ViewMainWindow(tkinter.Frame):
 				10))
 		self.tk_label_number_of_entries.grid(
 			row = 2,
-			column = 0,
-			rowspan = 3)
+			columnspan = 9,
+			column = 0)
 		
 		# Show done entries.
 		self.tk_label_current = tkinter.Label(
@@ -93,8 +91,8 @@ class ViewMainWindow(tkinter.Frame):
 				10))
 		self.tk_label_current.grid(
 			row = 3,
-			column = 0,
-			rowspan = 2)	
+			columnspan = 9,
+			column = 0)	
 		
 		# Word to guess
 		self.tk_label_word_to_guess = tkinter.Label(
@@ -103,26 +101,11 @@ class ViewMainWindow(tkinter.Frame):
 			font = (
 				"Arial",
 				20),
-			wraplength="7cm")
+			wraplength="12cm")
 		self.tk_label_word_to_guess.grid(
-			row = 0,
-			column = 1,
+			row = 4,
+			column = 0,
 			columnspan = 9)	
-	
-		
-		# Hint
-		self.tk_label_hint = tkinter.Label(
-			self.tk_frame)
-		self.tk_label_hint.config(
-			font = (
-				"Arial",
-				20),
-			bg = "gray")
-		self.tk_label_hint.grid(
-			row = 1,
-			column = 1,
-			columnspan = 9,
-			sticky = "we")	
 		
 		
 		# User input
@@ -130,24 +113,39 @@ class ViewMainWindow(tkinter.Frame):
 			self.tk_frame)
 		self.tk_entry_user_input.config(
 			font = (
-				"Arial",
+				"Courier New",
 				20),
 			justify = "center")
 		self.tk_entry_user_input.grid(
-			row = 2,
-			column = 1,
+			row = 5,
+			column = 0,
 			columnspan = 9,
 			sticky="we")
+		
 		
 		# Check
 		self.tk_button_check = tkinter.Button(
 			self.tk_frame,
 			text = "Check")
 		self.tk_button_check.grid(
-			row = 3,
-			column = 1,
+			row = 6,
+			column = 0,
 			columnspan = 9,
 			sticky="we")
+			
+					
+		# Hint
+		self.tk_label_hint = tkinter.Label(
+			self.tk_frame)
+		self.tk_label_hint.config(
+			font = (
+				"Courier New",
+				20))
+		self.tk_label_hint.grid(
+			row = 7,
+			column = 0,
+			columnspan = 9,
+			sticky = "we")				
 	
 		
 		# Hint button
@@ -155,8 +153,8 @@ class ViewMainWindow(tkinter.Frame):
 			self.tk_frame,
 			text = "Hint")
 		self.tk_button_hint.grid(
-			row = 4,
-			column = 1,
+			row = 8,
+			column = 0,
 			columnspan = 9,
 			sticky="we")
 		
@@ -170,8 +168,8 @@ class ViewMainWindow(tkinter.Frame):
 				"Courier New",
 				14))
 		self.tk_button_1.grid(
-			row = 5,
-			column = 1,
+			row = 9,
+			column = 0,
 			sticky="we")
 		
 		self.tk_button_2 = tkinter.Button(
@@ -182,8 +180,8 @@ class ViewMainWindow(tkinter.Frame):
 				"Courier New",
 				14))			
 		self.tk_button_2.grid(
-			row = 5,
-			column = 2,
+			row = 9,
+			column = 1,
 			sticky="we")
 
 		self.tk_button_3 = tkinter.Button(
@@ -194,8 +192,8 @@ class ViewMainWindow(tkinter.Frame):
 				"Courier New",
 				14))			
 		self.tk_button_3.grid(
-			row = 5,
-			column = 3,
+			row = 9,
+			column = 2,
 			sticky="we")
 		
 		self.tk_button_4 = tkinter.Button(
@@ -206,8 +204,8 @@ class ViewMainWindow(tkinter.Frame):
 				"Courier New",
 				14))			
 		self.tk_button_4.grid(
-			row = 5,
-			column = 4,
+			row = 9,
+			column = 3,
 			sticky="we")
 		
 		self.tk_button_5 = tkinter.Button(
@@ -218,8 +216,8 @@ class ViewMainWindow(tkinter.Frame):
 				"Courier New",
 				14))			
 		self.tk_button_5.grid(
-			row = 5,
-			column = 5,
+			row = 9,
+			column = 4,
 			sticky="we")	
 		
 		self.tk_button_6 = tkinter.Button(
@@ -230,8 +228,8 @@ class ViewMainWindow(tkinter.Frame):
 				"Courier New",
 				14))			
 		self.tk_button_6.grid(
-			row = 5,
-			column = 6,
+			row = 9,
+			column = 5,
 			sticky="we")
 		
 		self.tk_button_7 = tkinter.Button(
@@ -242,8 +240,8 @@ class ViewMainWindow(tkinter.Frame):
 				"Courier New",
 				14))			
 		self.tk_button_7.grid(
-			row = 5,
-			column = 7,
+			row = 9,
+			column = 6,
 			sticky="we")
 		
 		self.tk_button_8 = tkinter.Button(
@@ -254,8 +252,8 @@ class ViewMainWindow(tkinter.Frame):
 				"Courier New",
 				14))			
 		self.tk_button_8.grid(
-			row = 5,
-			column = 8,
+			row = 9,
+			column = 7,
 			sticky="we")
 		
 		self.tk_button_9 = tkinter.Button(
@@ -266,8 +264,8 @@ class ViewMainWindow(tkinter.Frame):
 				"Courier New",
 				14))			
 		self.tk_button_9.grid(
-			row = 5,
-			column = 9,
+			row = 9,
+			column = 8,
 			sticky="we")	
 
 		
