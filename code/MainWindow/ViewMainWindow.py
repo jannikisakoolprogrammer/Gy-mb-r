@@ -1,6 +1,8 @@
 import tkinter
 import tkinter.ttk
 
+from code.MainWindow import ConstantsMainWindow
+
 
 class ViewMainWindow(tkinter.Frame):
 	def __init__(self,
@@ -20,7 +22,10 @@ class ViewMainWindow(tkinter.Frame):
 		self.tkinter_frame = None
 		
 		# Master
-		self.master = _master		
+		self.master = _master	
+		self.master.title(" ".join(
+			(ConstantsMainWindow.TITLE,
+			ConstantsMainWindow.VERSION)))
 		#self.master.minsize(600, 400)
 		#self.master.geometry("800x300")	
 		
