@@ -1,0 +1,2 @@
+class IView(object):
+	pass

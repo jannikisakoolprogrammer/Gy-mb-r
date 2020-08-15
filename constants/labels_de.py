@@ -1,0 +1,2 @@
+CHECK = "Check"
+HINT = "Hint"

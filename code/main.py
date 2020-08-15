@@ -11,14 +11,9 @@ from code.MainWindow.ModelMainWindow import ModelMainWindow
 
 
 def main():
-	database = Database()
-	root_tk = tkinter.Tk()
-	view_main_window = ViewMainWindow(root_tk);
-	model_main_window = ModelMainWindow(database);	
-	presenter_main_window = PresenterMainWindow(
-		view_main_window,
-		model_main_window)
-		
-	presenter_main_window.load_next_word_pair()
-		
-	presenter_main_window.run()
+
+	model_main_window = ModelMainWindow(Database());	
+	presenter_main_window = PresenterMainWindow(model_main_window)
+	view_main_window = ViewMainWindow(presenter_main_window);
+	
+	view_main_window.run()
