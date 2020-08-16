@@ -37,8 +37,66 @@ class IViewMainWindow(
 	
 	
 	@abc.abstractmethod
+	def set_user_input(
+		self,
+		_user_input):
+		
+		pass
+	
+	
+	@abc.abstractmethod
 	def set_hint(
 		self,
 		_hint):
 		
+		pass
+	
+	
+	@abc.abstractmethod
+	def disable_hint_button(self):
+	
+		pass
+		
+	
+	@abc.abstractmethod	
+	def tk_button_check_clicked(
+		self,
+		_event):
+		
+		pass
+	
+	
+	@abc.abstractmethod
+	def tk_button_hint_clicked(
+		self,
+		_event = None):
+	
+		pass
+	
+	
+	@abc.abstractmethod
+	def tk_button_letter_clicked(
+		self,
+		_event):
+		
+		pass
+	
+	
+	@abc.abstractmethod
+	def entry_user_input_get_cursor_index(self):
+	
+		pass
+		
+		
+	@abc.abstractmethod
+	def entry_user_input_set_cursor_index(
+		self,
+		_index):
+		
+		pass
+		
+		
+	@abc.abstractmethod
+	def reset_user_input(self):
+	
 		pass

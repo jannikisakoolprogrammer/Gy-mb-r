@@ -56,16 +56,27 @@ class PresenterMainWindow(Presenter):
 		located.
 		"""
 		
+		# Get pos of cursor.
+		cursor_pos = self.view.entry_user_input_get_cursor_index()
+		
+		# User input
+		user_input = self.view.get_user_input()
+		
+		# Char to add.
 		char = _event.widget["text"].lower()
 		
-		user_input = tkinter.StringVar()
-		user_input.set(self.view.tk_entry_user_input.get() + char)
+		# Build input.
+		new_user_input = user_input[:cursor_pos] + char + user_input[cursor_pos:]
 		
-		self.view.tk_entry_user_input.config(
-			text = user_input)
-			
-		self.view.tk_entry_user_input.icursor(
-			len(user_input.get()))		
+		user_input = tkinter.StringVar()
+		user_input.set(new_user_input)
+		
+		# Set user input in view.
+		self.view.set_user_input(user_input)
+
+		# Increase cursor position by one.
+		self.view.entry_user_input_set_cursor_index(
+			cursor_pos + 1)
 		
 	
 	def view_update_current_word_counter(self):
@@ -85,8 +96,8 @@ class PresenterMainWindow(Presenter):
 		
 		if user_input.lower() == self.model.target_word.lower():
 			
-			self.view.tk_entry_user_input.delete(0, tkinter.END)
-			self.view.tk_entry_user_input.insert(0, "")
+			# Reset entry field.
+			self.view.reset_user_input()
 		
 			self.load_next_word_pair()
 			

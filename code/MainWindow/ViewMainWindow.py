@@ -21,10 +21,7 @@ class ViewMainWindow(
 		
 		# Init instance members used throughout the entire class with a default
 		# value.
-		self.master = None
-		
-		self.presenter = _presenter
-		self.presenter.set_view(self)	
+		self.master = None	
 		
 		# Menu
 		self.tkinter_menu = None
@@ -44,14 +41,18 @@ class ViewMainWindow(
 		self.tk_frame_create()
 		
 		# Pack all controls.
-		self.grid(
-			row = 0,
-			column = 0)
-			
-		self.bind_events()			
-
+		#self.grid(
+		#	row = 0,
+		#	column = 0)
+		self.pack()
+		
+		self.presenter = _presenter
+		self.presenter.set_view(self)
+		
 		# Let the presenter init this view.
-		self.presenter.init_view()
+		self.presenter.init_view()			
+			
+		self.bind_events()
 
 	
 	def tk_frame_create(self):
@@ -336,6 +337,14 @@ class ViewMainWindow(
 	def get_user_input(self):
 	
 		return self.tk_entry_user_input.get()
+		
+		
+	def set_user_input(
+		self,
+		_user_input):
+		
+		self.tk_entry_user_input.config(
+			text = _user_input)
 	
 	
 	def set_hint(
@@ -372,6 +381,25 @@ class ViewMainWindow(
 		
 		self.presenter.add_special_letter(_event)
 		
+		
+	def entry_user_input_get_cursor_index(self):
+	
+		return self.tk_entry_user_input.index(tkinter.INSERT)
+	
+	
+	def entry_user_input_set_cursor_index(
+		self,
+		_index):
+		
+		self.tk_entry_user_input.icursor(
+			_index)
+			
+			
+	def reset_user_input(self):
+	
+		self.tk_entry_user_input.delete(0, tkinter.END)
+		self.tk_entry_user_input.insert(0, "")			
+	
 	
 	def run(self):
 	

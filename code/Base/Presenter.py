@@ -12,9 +12,5 @@ class Presenter(object):
 		self.parent_presenter = _parent_presenter
 	
 	
-	def run(self):
-		self.view.mainloop()
-	
-	
 	def view_update_controls(self):
 		pass
