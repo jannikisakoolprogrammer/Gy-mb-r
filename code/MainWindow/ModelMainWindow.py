@@ -48,8 +48,8 @@ class ModelMainWindow(Model):
 		
 		chosen_entry = self.entries[self.n_cur_entry]
 		
-		self.source_word = chosen_entry.split("-")[1].strip()
-		self.target_word = chosen_entry.split("-")[0].strip()
+		self.source_word = chosen_entry.split("|")[1].strip()
+		self.target_word = chosen_entry.split("|")[0].strip()
 		
 		self.prepare_hint()
 	
