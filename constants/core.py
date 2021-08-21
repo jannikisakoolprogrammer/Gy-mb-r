@@ -29,7 +29,7 @@ WRAPLENGTH = "12cm"
 
 TEXT_TOOL_TITLE = "Gyömbér"
 TEXT_TOOL_DESCRIPTION = "Learn Hungarian vocabulary the hard way."
-TEXT_TOOL_VERSION = "v1.0.3"
+TEXT_TOOL_VERSION = "v1.0.4"
 
 CHAR_SPACE = " "
 
