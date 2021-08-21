@@ -7,7 +7,7 @@ Remélem hogy tetszik a programot.
 ![grafik](https://user-images.githubusercontent.com/1522660/130333956-4f12cca3-9547-4a0e-af7e-15ee9fd02073.png)
 
 
-How it works.  Start by double-clicking "gyöämbér.py"  in the root directory.
+How it works.  Start by double-clicking "gyömbér.py"  in the root directory.
 Then, once the program has started, go to "File -> Open".
 Then navigate to the directory "language_files" in the root directory, and choose one of the three files.
 
