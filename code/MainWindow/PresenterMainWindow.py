@@ -139,3 +139,28 @@ class PresenterMainWindow(Presenter):
 			
 				# Deactivate Hint button.
 				self.view.disable_hint_button()
+				
+	
+	def file_open(self):
+		"""Opens a file from which to read vocabulary.
+		"""
+	
+		self.view.open_filedialog()
+		
+		filename = self.view.get_filename()
+		result = self.model.validate_file(filename)
+		
+		if result == False:
+			self.view.show_error_file()
+			
+		else:
+			self.model.set_filename(filename)
+			self.model.load_vocabulary()
+			self.init_view()
+	
+	
+	def program_exit(self):
+		"""Exists the program.
+		"""
+		
+		self.view.master.destroy()

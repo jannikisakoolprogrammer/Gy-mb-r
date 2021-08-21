@@ -1,5 +1,6 @@
 import tkinter
 import tkinter.ttk
+import tkinter.filedialog
 
 from code.MainWindow import ConstantsMainWindow
 from code.MainWindow.IViewMainWindow import IViewMainWindow
@@ -22,10 +23,6 @@ class ViewMainWindow(
 		# Init instance members used throughout the entire class with a default
 		# value.
 		self.master = None	
-		
-		# Menu
-		self.tkinter_menu = None
-		self.tkinter_menu_file = None
 		
 		# Frames
 		self.tkinter_frame = None
@@ -50,7 +47,7 @@ class ViewMainWindow(
 		self.presenter.set_view(self)
 		
 		# Let the presenter init this view.
-		self.presenter.init_view()			
+		# self.presenter.init_view()			
 			
 		self.bind_events()
 
@@ -62,6 +59,30 @@ class ViewMainWindow(
 			row = 0,
 			column = 0,
 			sticky = "nsew")
+			
+		# Menu
+		self.tk_menu = tkinter.Menu(self.master)
+		
+		# Filemenu
+		self.tk_menu_file = tkinter.Menu(
+			self.tk_menu,
+			tearoff = 0)			
+		self.tk_menu.add_cascade(
+			label = labels.FILE,
+			menu = self.tk_menu_file)
+			
+		# File menu options
+		self.tk_menu_file.add_command(
+			label = labels.OPEN,
+			command = self.tk_menu_file_open_clicked)
+			
+		self.tk_menu_file.add_command(
+			label = labels.EXIT,
+			command = self.tk_menu_file_exit_clicked)
+			
+		self.master.config(menu = self.tk_menu)
+
+			
 			
 		# Gyömbér
 		self.tk_label_heading = tkinter.Label(
@@ -398,7 +419,23 @@ class ViewMainWindow(
 	def reset_user_input(self):
 	
 		self.tk_entry_user_input.delete(0, tkinter.END)
-		self.tk_entry_user_input.insert(0, "")			
+		self.tk_entry_user_input.insert(0, "")
+
+
+	def tk_menu_file_open_clicked(self):
+		self.presenter.file_open()
+		
+
+	def open_filedialog(self):
+		self.filename = tkinter.filedialog.askopenfilename()
+	
+	
+	def get_filename(self):
+		return self.filename
+	
+	
+	def tk_menu_file_exit_clicked(self):
+		self.presenter.program_exit()
 	
 	
 	def run(self):
@@ -455,4 +492,3 @@ class ViewMainWindow(
 		self.tk_button_9.bind(
 			"<Button-1>",
 			self.tk_button_letter_clicked)
-	

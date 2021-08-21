@@ -12,11 +12,42 @@ class ModelMainWindow(Model):
 			ModelMainWindow,
 			self).__init__(_database)
 			
+		self.filename = ""	
+
+		self.n_cur_entry = 0
+		self.n_len_entries = 0
+		
+		self.correct_guesses = 0
+		self.incorrect_guesses = 0
+		
+		self.n_printable_chars = 0		
+		self.hint_word = None
+		self.n_hints = 0
+		self.cur_hint = 0
+		
+		self._printable_chars_positions = []	
 			
+	
+	def validate_file(self,
+		_filename):
+		"""Validates the file _filename.
+		"""
+		
+		# TODO:  Implement logic.
+		
+		return True
+	
+	
+	def set_filename(self,
+		_filename):
+		
+		self.filename = _filename
+	
+	
+	def load_vocabulary(self):
+		
 		self.f = open(
-			os.path.join(
-				"language_files",
-				"data"),
+			self.filename,
 			encoding = "utf-8")
 		
 		self.entries = self.f.readlines()
@@ -33,7 +64,7 @@ class ModelMainWindow(Model):
 		self.n_hints = 0
 		self.cur_hint = 0
 		
-		self._printable_chars_positions = []
+		self._printable_chars_positions = []	
 
 	
 	def next_word_pair(self):
