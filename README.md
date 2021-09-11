@@ -1,5 +1,5 @@
 # Gyömbér
-wef21312323424234
+Commit 1
 Sziasztok!
 Gyömbér egy program amivel mindenki tudnak tanulni a magyar nyelvet. Remélem hogy tetszik a programot. 
 Remélem hogy tetszik a programot.
