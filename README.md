@@ -1,5 +1,5 @@
 # Gyömbér
-Commit 1
+Commit 2
 Sziasztok!
 Gyömbér egy program amivel mindenki tudnak tanulni a magyar nyelvet. Remélem hogy tetszik a programot. 
 Remélem hogy tetszik a programot.
