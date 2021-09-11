@@ -1,6 +1,6 @@
 # Gyömbér
 
-Teszt 123.
+Teszt 123. wefwef wf
 
 Sziasztok!
 Gyömbér egy program amivel mindenki tudnak tanulni a magyar nyelvet. Remélem hogy tetszik a programot. 
