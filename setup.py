@@ -13,7 +13,7 @@ if sys.platform == "win32":
 setup(
     name = "Gyömbér",
     version = "0.1",
-    description = "My GUI application!",
+    description = "Learn Hungarian the hard way!",
     options = {"build_exe": build_exe_options},
     executables = [Executable("gyömbér.py", base=base)]
 )
