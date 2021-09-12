@@ -10,6 +10,7 @@ base = None
 if sys.platform == "win32":
     base = "Win32GUI"
 
+# Gyoember-0.1-win64.msi or find the file in Gyoember/dist/
 setup(
     name = "Gyoember",
     version = "0.1",
