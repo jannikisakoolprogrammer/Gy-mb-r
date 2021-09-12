@@ -11,9 +11,9 @@ if sys.platform == "win32":
     base = "Win32GUI"
 
 setup(
-    name = "Gyömbér",
+    name = "Gyoember",
     version = "0.1",
     description = "Learn Hungarian the hard way!",
     options = {"build_exe": build_exe_options},
-    executables = [Executable("gyömbér.py", base=base)]
+    executables = [Executable("Gyoember.py", base=base)]
 )
