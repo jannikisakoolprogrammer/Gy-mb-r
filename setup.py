@@ -8,13 +8,13 @@ build_exe_options = {"packages": ["os"], "includes": ["tkinter"], "include_files
 # base="Win32GUI" should be used only for Windows GUI app - test
 base = None
 if sys.platform == "win32":
-    base = "Win32GUI"
+   base = "Win32GUI"
 
 # Gyoember-0.1-win64.msi or find the file in Gyoember/dist/
 setup(
     name = "Gyoember",
-    version = "0.1",
+    version = "1.0.5",
     description = "Learn Hungarian the hard way!",
     options = {"build_exe": build_exe_options},
-    executables = [Executable("Gyoember.py", base=base)]
+    executables = [Executable("gyoember.py", base=base)]
 )
