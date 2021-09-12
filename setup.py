@@ -11,7 +11,7 @@ if sys.platform == "win32":
     base = "Win32GUI"
 
 setup(
-    name = "guifoo",
+    name = "Gyömbér",
     version = "0.1",
     description = "My GUI application!",
     options = {"build_exe": build_exe_options},
