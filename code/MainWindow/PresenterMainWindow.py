@@ -37,6 +37,9 @@ class PresenterMainWindow(Presenter):
 		# Show current word counter
 		self.view_update_current_word_counter()
 		
+		# Show mistakes made.
+		self.view_update_mistakes_counter()
+		
 		# Set word to guess in view.
 		self.view.set_word_to_guess(
 			self.model.source_word)
@@ -60,6 +63,7 @@ class PresenterMainWindow(Presenter):
 		cursor_pos = self.view.entry_user_input_get_cursor_index()
 		
 		# User input
+		self.view.set_user_input("")
 		user_input = self.view.get_user_input()
 		
 		# Char to add.
@@ -68,20 +72,26 @@ class PresenterMainWindow(Presenter):
 		# Build input.
 		new_user_input = user_input[:cursor_pos] + char + user_input[cursor_pos:]
 		
-		user_input = tkinter.StringVar()
-		user_input.set(new_user_input)
-		
 		# Set user input in view.
-		self.view.set_user_input(user_input)
+		self.view.set_user_input(new_user_input)
 
 		# Increase cursor position by one.
 		self.view.entry_user_input_set_cursor_index(
 			cursor_pos + 1)
+			
+		#Give focus to the entry box again.
+		self.view.entry_user_input_set_focus()
 		
 	
 	def view_update_current_word_counter(self):
 	
-		self.view.set_current(self.model.get_current_word_counter())			
+		self.view.set_current(self.model.get_current_word_counter())
+	
+	
+	def view_update_mistakes_counter(self):
+	
+		self.view.set_mistakes(
+			self.model.get_mistakes_made())
 
 	
 	def load_next_word_pair(self):
@@ -112,7 +122,20 @@ class PresenterMainWindow(Presenter):
 			self.view.enable_hint_button()
 			
 			# Make hint blank.
-			self.view.set_hint_blank()			
+			self.view.set_hint_blank()
+			
+			# Reset mistakes counter.
+			self.view_update_mistakes_counter()
+		
+		else:
+			# Set old user input again.
+			self.view.set_user_input(user_input)
+			# Increase mistakes counter.
+			self.model.increase_mistakes_counter()
+			
+			# Show the user the amount of mistakes made.
+			self.view.set_mistakes(
+				self.model.get_mistakes_made())
 	
 	
 	def hint(self, _E = None):

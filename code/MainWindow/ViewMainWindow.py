@@ -32,7 +32,9 @@ class ViewMainWindow(
 		self.master.title(
 			core.CHAR_SPACE.join((
 				core.TEXT_TOOL_TITLE,
-				core.TEXT_TOOL_VERSION)))	
+				core.TEXT_TOOL_VERSION)))
+				
+		self.style = tkinter.ttk.Style()
 		
 		# Ablakok
 		self.tk_frame_create()
@@ -53,7 +55,7 @@ class ViewMainWindow(
 
 	
 	def tk_frame_create(self):
-		self.tk_frame = tkinter.Frame(
+		self.tk_frame = tkinter.ttk.Frame(
 			self)
 		self.tk_frame.grid(
 			row = 0,
@@ -85,7 +87,7 @@ class ViewMainWindow(
 			
 			
 		# Gyömbér
-		self.tk_label_heading = tkinter.Label(
+		self.tk_label_heading = tkinter.ttk.Label(
 			self.tk_frame,
 			text = core.TEXT_TOOL_TITLE,
 			font = (
@@ -97,13 +99,16 @@ class ViewMainWindow(
 			columnspan = 9)
 		
 		# Subheading
-		self.tk_label_subheading = tkinter.Label(
+		self.style.configure(
+			"G.TLabel",
+			foreground = "grey")
+		self.tk_label_subheading = tkinter.ttk.Label(
 			self.tk_frame,
 			text = core.TEXT_TOOL_DESCRIPTION,
 			font = (
 				core.FONT_DEFAULT,
 				core.FONT_SIZE_SUBHEADING),
-			fg = "grey")
+			style = "G.TLabel")
 		self.tk_label_subheading.grid(
 			row = 1,
 			column = 0,
@@ -111,7 +116,7 @@ class ViewMainWindow(
 			sticky = "n")
 		
 		# Show number of entries
-		self.tk_label_number_of_entries = tkinter.Label(
+		self.tk_label_number_of_entries = tkinter.ttk.Label(
 			self.tk_frame)
 		self.tk_label_number_of_entries.config(
 			font = (
@@ -123,7 +128,7 @@ class ViewMainWindow(
 			column = 0)
 		
 		# Show done entries.
-		self.tk_label_current = tkinter.Label(
+		self.tk_label_current = tkinter.ttk.Label(
 			self.tk_frame)
 		self.tk_label_current.config(
 			font = (
@@ -132,10 +137,22 @@ class ViewMainWindow(
 		self.tk_label_current.grid(
 			row = 3,
 			columnspan = 9,
-			column = 0)	
+			column = 0)		
+		
+		# Show amount of mistakes made.
+		self.tk_label_number_of_mistakes = tkinter.ttk.Label(
+			self.tk_frame)
+		self.tk_label_number_of_mistakes.config(
+			font = (
+				core.FONT_DEFAULT,
+				core.FONT_SIZE_DEFAULT))
+		self.tk_label_number_of_mistakes.grid(
+			row = 4,
+			columnspan = 9,
+			column = 0)			
 		
 		# Word to guess
-		self.tk_label_word_to_guess = tkinter.Label(
+		self.tk_label_word_to_guess = tkinter.ttk.Label(
 			self.tk_frame)
 		self.tk_label_word_to_guess.config(
 			font = (
@@ -143,13 +160,13 @@ class ViewMainWindow(
 				core.FONT_SIZE_GUESS),
 			wraplength=core.WRAPLENGTH)
 		self.tk_label_word_to_guess.grid(
-			row = 4,
+			row = 5,
 			column = 0,
 			columnspan = 9)	
 		
 		
 		# User input
-		self.tk_entry_user_input = tkinter.Entry(
+		self.tk_entry_user_input = tkinter.ttk.Entry(
 			self.tk_frame)
 		self.tk_entry_user_input.config(
 			font = (
@@ -157,154 +174,135 @@ class ViewMainWindow(
 				core.FONT_SIZE_GUESS),
 			justify = core.STANDARD_JUSTIFY)
 		self.tk_entry_user_input.grid(
-			row = 5,
+			row = 6,
 			column = 0,
 			columnspan = 9,
 			sticky="we")
 		
 		
 		# Check
-		self.tk_button_check = tkinter.Button(
+		self.tk_button_check = tkinter.ttk.Button(
 			self.tk_frame,
 			text = labels.CHECK)
 		self.tk_button_check.grid(
-			row = 6,
+			row = 7,
 			column = 0,
 			columnspan = 9,
 			sticky="we")
 			
 					
 		# Hint
-		self.tk_label_hint = tkinter.Label(
+		self.tk_label_hint = tkinter.ttk.Label(
 			self.tk_frame)
 		self.tk_label_hint.config(
 			font = (
 				core.FONT_MONOSPACE,
-				core.FONT_SIZE_GUESS))
+				core.FONT_SIZE_GUESS),
+			anchor = tkinter.CENTER)
 		self.tk_label_hint.grid(
-			row = 7,
+			row = 8,
 			column = 0,
 			columnspan = 9,
 			sticky = "we")				
 	
 		
 		# Hint button
-		self.tk_button_hint = tkinter.Button(
+		self.tk_button_hint = tkinter.ttk.Button(
 			self.tk_frame,
 			text = labels.HINT)
 		self.tk_button_hint.grid(
-			row = 8,
+			row = 9,
 			column = 0,
 			columnspan = 9,
 			sticky="we")
 		
 		
 		# Buttons for hungarian only letters
-		self.tk_button_1 = tkinter.Button(
-			self.tk_frame,
-			text = "Á")
-		self.tk_button_1.config(
+		self.style.configure(
+			"Font.TButton",
 			font = (
 				core.FONT_MONOSPACE,
-				core.FONT_SIZE_LETTER_BUTTONS))
+				core.FONT_SIZE_LETTER_BUTTONS),
+			width = 4)
+				
+		self.tk_button_1 = tkinter.ttk.Button(
+			self.tk_frame,
+			text = "Á",
+			style="Font.TButton")
 		self.tk_button_1.grid(
-			row = 9,
+			row = 10,
 			column = 0,
 			sticky="we")
 		
-		self.tk_button_2 = tkinter.Button(
+		self.tk_button_2 = tkinter.ttk.Button(
 			self.tk_frame,
-			text = "Í")
-		self.tk_button_2.config(
-			font = (
-				core.FONT_MONOSPACE,
-				core.FONT_SIZE_LETTER_BUTTONS))			
+			text = "Í",
+			style="Font.TButton")
 		self.tk_button_2.grid(
-			row = 9,
+			row = 10,
 			column = 1,
 			sticky="we")
 
-		self.tk_button_3 = tkinter.Button(
+		self.tk_button_3 = tkinter.ttk.Button(
 			self.tk_frame,
-			text = "Ó")
-		self.tk_button_3.config(
-			font = (
-				core.FONT_MONOSPACE,
-				core.FONT_SIZE_LETTER_BUTTONS))			
+			text = "Ó",
+			style="Font.TButton")
 		self.tk_button_3.grid(
-			row = 9,
+			row = 10,
 			column = 2,
 			sticky="we")
 		
-		self.tk_button_4 = tkinter.Button(
+		self.tk_button_4 = tkinter.ttk.Button(
 			self.tk_frame,
-			text = "Ú")
-		self.tk_button_4.config(
-			font = (
-				core.FONT_MONOSPACE,
-				core.FONT_SIZE_LETTER_BUTTONS))			
+			text = "Ú",
+			style="Font.TButton")
 		self.tk_button_4.grid(
-			row = 9,
+			row = 10,
 			column = 3,
 			sticky="we")
 		
-		self.tk_button_5 = tkinter.Button(
+		self.tk_button_5 = tkinter.ttk.Button(
 			self.tk_frame,
-			text = "É")
-		self.tk_button_5.config(
-			font = (
-				core.FONT_MONOSPACE,
-				core.FONT_SIZE_LETTER_BUTTONS))			
+			text = "É",
+			style="Font.TButton")
 		self.tk_button_5.grid(
-			row = 9,
+			row = 10,
 			column = 4,
 			sticky="we")	
 		
-		self.tk_button_6 = tkinter.Button(
+		self.tk_button_6 = tkinter.ttk.Button(
 			self.tk_frame,
-			text = "Ö")
-		self.tk_button_6.config(
-			font = (
-				core.FONT_MONOSPACE,
-				core.FONT_SIZE_LETTER_BUTTONS))			
+			text = "Ö",
+			style="Font.TButton")
 		self.tk_button_6.grid(
-			row = 9,
+			row = 10,
 			column = 5,
 			sticky="we")
 		
-		self.tk_button_7 = tkinter.Button(
+		self.tk_button_7 = tkinter.ttk.Button(
 			self.tk_frame,
-			text = "Ü")
-		self.tk_button_7.config(
-			font = (
-				core.FONT_MONOSPACE,
-				core.FONT_SIZE_LETTER_BUTTONS))			
+			text = "Ü",
+			style="Font.TButton")
 		self.tk_button_7.grid(
-			row = 9,
+			row = 10,
 			column = 6,
 			sticky="we")
 		
-		self.tk_button_8 = tkinter.Button(
+		self.tk_button_8 = tkinter.ttk.Button(
 			self.tk_frame,
-			text = "Ő")
-		self.tk_button_8.config(
-			font = (
-				core.FONT_MONOSPACE,
-				core.FONT_SIZE_LETTER_BUTTONS))			
+			text = "Ő",
+			style="Font.TButton")
 		self.tk_button_8.grid(
-			row = 9,
+			row = 10,
 			column = 7,
 			sticky="we")
 		
-		self.tk_button_9 = tkinter.Button(
+		self.tk_button_9 = tkinter.ttk.Button(
 			self.tk_frame,
-			text = "Ű")
-		self.tk_button_9.config(
-			font = (
-				core.FONT_MONOSPACE,
-				core.FONT_SIZE_LETTER_BUTTONS))			
+			text = "Ű",
+			style="Font.TButton")
 		self.tk_button_9.grid(
-			row = 9,
+			row = 10,
 			column = 8,
 			sticky="we")
 			
@@ -332,7 +330,15 @@ class ViewMainWindow(
 		_current):
 		
 		self.tk_label_current.config(
-			text = labels.ENTRIES_DONE % (_current))	
+			text = labels.ENTRIES_DONE % (_current))
+	
+	
+	def set_mistakes(
+		self,
+		_mistakes):
+		
+		self.tk_label_number_of_mistakes.config(
+			text = labels.MISTAKES % (_mistakes))
 	
 	
 	def set_word_to_guess(
@@ -357,15 +363,19 @@ class ViewMainWindow(
 	
 	def get_user_input(self):
 	
-		return self.tk_entry_user_input.get()
+		text = self.tk_entry_user_input.get()
+		self.tk_entry_user_input.delete(
+			0, len(text))
+		return text
 		
 		
 	def set_user_input(
 		self,
 		_user_input):
-		
-		self.tk_entry_user_input.config(
-			text = _user_input)
+	
+		self.tk_entry_user_input.insert(
+			-1,
+			_user_input)
 	
 	
 	def set_hint(
@@ -414,6 +424,11 @@ class ViewMainWindow(
 		
 		self.tk_entry_user_input.icursor(
 			_index)
+			
+	def entry_user_input_set_focus(
+		self):
+		
+		self.after(1, lambda: self.tk_entry_user_input.focus_set())
 			
 			
 	def reset_user_input(self):

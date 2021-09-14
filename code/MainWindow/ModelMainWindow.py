@@ -25,6 +25,8 @@ class ModelMainWindow(Model):
 		self.n_hints = 0
 		self.cur_hint = 0
 		
+		self.n_mistakes = 0
+		
 		self._printable_chars_positions = []	
 			
 	
@@ -64,6 +66,8 @@ class ModelMainWindow(Model):
 		self.n_hints = 0
 		self.cur_hint = 0
 		
+		self.n_mistakes = 0
+		
 		self._printable_chars_positions = []	
 
 	
@@ -73,6 +77,8 @@ class ModelMainWindow(Model):
 	
 		if self.n_cur_entry >= self.n_len_entries:
 			self.n_cur_entry = 0
+			
+			self.n_mistakes = 0
 			
 			# Randomize again
 			random.shuffle(self.entries)
@@ -173,4 +179,13 @@ class ModelMainWindow(Model):
 	def get_current_word_counter(self):
 	
 		return self.n_cur_entry
+	
+	
+	def increase_mistakes_counter(self):
+	
+		self.n_mistakes += 1
+		
+	def get_mistakes_made(self):
+	
+		return self.n_mistakes
 		

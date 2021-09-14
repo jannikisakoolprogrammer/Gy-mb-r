@@ -20,6 +20,14 @@ class IViewMainWindow(
 		_current):
 		
 		pass
+		
+
+	@abc.abstractmethod
+	def set_mistakes(
+		self,
+		_current):
+		
+		pass		
 	
 	
 	@abc.abstractmethod
@@ -99,4 +107,11 @@ class IViewMainWindow(
 	@abc.abstractmethod
 	def reset_user_input(self):
 	
+		pass
+	
+	
+	@abc.abstractmethod
+	def entry_user_input_set_focus(
+		self):
+		
 		pass
