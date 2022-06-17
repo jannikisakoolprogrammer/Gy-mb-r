@@ -468,9 +468,21 @@ class ViewMainWindow(
 			"<Button-1>",
 			self.tk_button_hint_clicked)
 			
+		self.tk_button_hint.bind(
+			"<F1>",
+			self.tk_button_hint_clicked)
+			
 		self.tk_entry_user_input.bind(
 			"<Return>",
 			self.tk_button_check_clicked)
+			
+		self.tk_entry_user_input.bind(
+			"<F1>",
+			self.tk_button_hint_clicked)
+			
+		self.bind(
+			"<F1>",
+			self.tk_button_hint_clicked)
 			
 		self.tk_button_1.bind(
 			"<Button-1>",

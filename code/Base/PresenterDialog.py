@@ -15,9 +15,10 @@ class PresenterDialog(Presenter):
 		super(
 			PresenterDialog,
 			self).__init__(
-				_view,
 				_model,
 				_parent_presenter)
+				
+		self.view = _view
 		
 		# Előállítom az eventhandlereket.
 		# Oké

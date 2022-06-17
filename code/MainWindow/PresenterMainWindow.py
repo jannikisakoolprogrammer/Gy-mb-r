@@ -7,6 +7,11 @@ from code.Base.Presenter import Presenter
 from constants import labels_en as labels
 
 
+from code.ResultsDialog.PresenterResultsDialog import PresenterResultsDialog
+from code.ResultsDialog.ViewResultsDialog import ViewResultsDialog
+from code.ResultsDialog.ModelResultsDialog import ModelResultsDialog
+
+
 class PresenterMainWindow(Presenter):
 
 	def __init__(
@@ -96,9 +101,18 @@ class PresenterMainWindow(Presenter):
 	
 	def load_next_word_pair(self):
 	
+		self.model.increase_cur_entry()
+		#if self.model.check_show_results_dialog() == True:
+		
+		#viewResultsDialog = ViewResultsDialog(self.view)
+		#modelResultsDialog = ModelResultsDialog(self.model.database)
+		#presenterResultsDialog = PresenterResultsDialog(
+		#	viewResultsDialog,
+		#	modelResultsDialog,
+		#	self)
+			
 		self.model.next_word_pair()
 
-	
 	
 	def check(self, _e = None):
 	
