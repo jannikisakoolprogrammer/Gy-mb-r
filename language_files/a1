@@ -1,0 +1,66 @@
+egy | eins
+kettő | zwei
+három | drei 
+négy | vier
+öt | fünf
+hat | sechs
+hét | sieben
+nyolc | acht
+kilenc | neun
+tíz | zehn
+tizenegy | elf
+tizenkettő | zwölf
+tizenhárom | dreizehn
+tizennégy | vierzehn
+tizenöt |fünfzehn
+tizenhat |sechzehn
+tizenhét | siebzehn
+tizennyolc | achtzehn
+tizenkilenc | neunzehn
+húsz | zwanzig
+huszonegy | einundzwanzig
+harminc | dreißig
+negyven | vierzig
+ötven | fünfzig
+hatvan | sechzig
+hetven | siebzig
+nyolcvan | achtzig
+kilencven | neunzig
+száz | hundert
+százegy | hunderteins
+kétszáz | zweihundert
+ezer | tausend
+millió | Million
+milliárd | Milliarde
+első | erste
+második | zweite
+harmadik | dritte
+negyedik | vierte
+szám | die Zahl
+számok | die Zahlen
+dátum | das Datum
+fél | halb
+negyed | viertel
+pontos idő | Uhrzeit
+nulla óra három | null Uhr drei
+húszonnegy óra | vierundzwanzig Uhr
+egy óra | ein Uhr
+TODO | fünf Minuten vor/nach eins
+TODO | viertel vor/nach zwei
+fél háromkor | halb drei
+másodperc | Sekunde
+perc | Minuten
+óra | Stunde
+nap | Tag
+hét | Woche
+hónap | Monat
+év | Jahr
+hétköznap | Wochentag
+vasárnap | Sonntag
+hétfő | Montag
+kedd | Dienstag
+szerda | Mittwoch
+csütörtök | Donnerstag
+péntek | Freitag
+szombat | Samstag
+hétvége | Wochenende
