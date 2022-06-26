@@ -86,3 +86,345 @@ tavasz | Frühling
 nyár | Sommer
 ősz | Herbst
 tél | Winter
+méter | Meter
+centiméter | Zentimeter
+négyzetméter | Quadratmeter
+fok | Grad
+százalék | Prozent
+liter | Liter
+gramm | Gramm
+dekagramm | Dekagramm
+font | Pfund
+kilogramm | Kilogramm
+Németország | Deutschland
+német | Deutscher
+Európa | Europa
+német | deutsch
+európai | Europäer
+európai | europäisch
+fekete | Schwarz
+szürke | Grau
+kék | Blau
+zöld | Grün
+fehér | weiß
+piros | Rot
+sárga | Gelb
+barna | Braun
+észak | Norden
+nyugat | Westen
+kelet | Osten
+dél | Süden
+-tól | ab
+-rol | ab
+de | aber
+indul | abfahren
+indulás | Abfahrt
+lead | abgeben
+elhoz | abholen
+feladó | Absender
+figyelem | Achtung!
+cím | Adresse
+mind | alle
+egyedül | allein
+hát | also
+régi | alt (Ding)
+öreg | alt (Alter)
+kor | Alter
+-nál | an, am
+kínál | anbieten
+ajánlat | Angebot
+másik | andere
+kezdődik | anfangen
+kezdet | Anfang
+rákattint | anklicken
+érkezik | ankommen
+érkezés | Ankunft
+bejelöl | ankreuzen
+bekapcsol | anmachen
+bejelentkezik | anmelden
+bejelentés | Anmeldung
+megszólítás | Anrede
+telefonál | anrufen
+hívás | Anruf
+üzenetrögzítő | Anrufbeantworter
+bejelentés | Ansage
+csatlakozás | Anschluss
+bekapcsol | anschalten
+ég | brennen
+váloszol | antworten
+felel | antworten
+válasz | Antwort
+felelet | Antwort
+hirdetés | Anzeige
+felöltözik | sich anziehen
+apartman | Apartment
+lakás | Wohnung
+alma | Apfel
+étvágy | Appetit
+dolgozik | arbeiten
+munka | Arbeit
+munkanélküli | arbeitslos
+munkahely | Arbeitsplatz
+kar | Arm
+orvos | Arzt
+is | auch
+-ra | auf
+-on | auf
+fel | auf
+feladat | Aufgabe
+abbahagy | aufhören
+nyitva | offen
+felkel | austehen
+feláll | aufstehen
+lift | Aufzug
+szem | Auge
+-bol | aus
+kirándulás | Ausflug
+kitölt | ausfüllen
+kijárat | Ausgang
+felvilágosítás | Auskunft
+külföld | Ausland
+külföldi | Ausländer
+külföldi | ausländisch
+lekapcsol | ausmachen, abschalten
+kijelentés | Aussage
+kinéz | aussehen
+kapcsolva | ausgemacht (Licht)
+kiszáll | aussteigen
+igazolvány | Ausweis
+vetkőzik | ausziehen
+autó | Auto
+kocsi | Auto
+autópálya | Autobahn
+automata | Automat
+automatikus | automatisch
+baba | Baby
+pékség | Bäckerei
+fürdő | Bad
+fürdik | baden
+vasút | Bahn
+pályaudvár | Bahnhof
+peron | Bahnsteig
+hamarosan | bald
+erkély | Balkon
+banán | Banane
+bank | Bank
+kézpénz | bar
+has | Bauch
+fa | Baum
+hivatalnok | Beamter
+bedeuten | jelent
+kezdődik | beginnen
+-nál | bei
+mindekét | beide
+lab | Bein, Fuß
+példa | Beispiel
+például | zum Beispiel
+ismerős | bekannt
+ismerős | Bekannte, Bekannter
+kap | bekommen
+használ | benutzen
+foglalkozás | Beruf
+foglalt | besetzt
+megnéz | besichtigen
+jobb | besser
+rendel | bestellen
+meglátogat | besuchen
+ágy | Bett
+fizet | bezahlen
+sör | Bier
+kép | Bild
+olcsó | billig
+körte | Birne
+-ig | bis
+egy kicsi | ein bisschen
+tessék | bitte
+kérem! | Bitte!
+kérés | Bitte
+kér | bitten
+keserű | bitter
+marad | bleiben
+ceruza | Bleistift
+pillantás | Blick
+ív | Bogen (Blatt)
+virág | Blume
+gonosz | böse
+szüksége van | etwas brauchen
+széles | breit
+levél | Brief
+bélyeg | Briefmarke
+hoz | bringen
+kenyér | Brot
+zsemle | Brötchen
+testvér | Bruder
+báty | älterer Bruder
+öcs | jüngerer Bruder
+könyv | Buch
+betű | Buchstabe
+betűz | buchstabieren
+busz | Bus
+vaj | Butter
+kávéház | Cáfe
+CD | CD
+főnök | Chef, Boss
+kb. | ca.
+számítógép | Computer
+ott | da
+itt | da
+hölgy | Dame
+közelében | daneben
+megköszön | danken
+köszönet | Dank
+Köszönöm! | Danke!
+akkor | dann
+majd | dann
+aztán | dann
+mert | denn
+a | der, die, das
+az | der, die, das
+téged | dich
+ez | diesen (nah)
+az | diesen (fern)
+neked | dir
+diszkó | Disko
+orvos | Doktor
+kétágyas szoba | Doppelzimmer
+falu | Dorf
+oda | dorthin
+ott | dort
+kint | draußen
+nyomtat | drucken
+nyomtató | Drucker
+nyom | drücken
+át | durch
+közlemény | Durchsage
+szabad | dürfen
+szomjúság | Durst
+szomjás |durstig
+zuhanyozik | duschen
+zuhany | Dusche
+sarok | Ecke
+feleség | Ehefrau
+férj | Ehemann
+tojás | Ei
+sietős | eilig
+egy | ein, eine
+egyszerű | einfach
+szerény | schlicht, einfach
+bejárat | Eingang
+vásárol | einkaufen
+meghív | einladen
+meghívás | Einladung
+egyszer | einmal
+beszáll | einsteigen
+belépés | Eintritt
+egyágyas szoba | Einzelzimmer
+szülők | Eltern
+e-mail | E-Mail
+címzett | Empfänger
+ajánl | empfehlen
+befejeződik | etwas endet
+Ende | vége
+bocsánatot kér | sich entschuldigen
+bocsánat | Entschuldigung
+ő | er, sie, es
+erdemény | Ergebnis
+magyaráz | erklären
+megenged | erlauben
+felnőtt | Erwachsener
+mesél | erzählen
+eszik | essen
+étel | Essen
+-tek | euer
+megy | fahren
+vezető | Fahrer
+jegy | Fahrkarte
+kerékpár | Fahrrad
+hamis | falsch
+család | Familie
+családnév | Nachname, Familienname
+családi állapot | Familienstand
+szín | Farbe
+fax | Fax
+ünneplés | Feier
+ünnepnap | Feiertag
+ünnepel | feiern
+hiányzik | fehlen
+hiba | Fehler
+tévét néz | fernsehen
+kész | fertig
+tűz | Feuer
+láz | Fieber
+film | Film
+találni | finden
+cég | Firma
+hal | Fisch
+üveg | Flasche
+hús | Fleisch
+repül | fliegen
+felszállás | Abflug
+repülőtér | Flugzeug
+űrlap | Formular
+kép | Foto
+kérdez | fragen
+kérdés | Frage
+nő | Frau
+szabad | frei
+szabadidő | Freizeit
+idegen | fremd
+örül | sich freuen
+barát | Freund
+korábban | früher
+reggelizik | frühstücken
+reggeli | Frühstück
+vezetés | Führung
+-nak | für
+számára | für
+láb | Fuß, Bein
+labdarúgás | Fußball
+kert | Garten
+vendég | Gast
+ad | geben
+született | geboren
+születési év | Geburtsjahr
+születési hely | Geburtsort
+születésnap | Geburtstag
+tetszik | gefallen
+ellen | gegen
+megy | gehen
+van | sein
+tartozik | gehören (zu etwas)
+pénz | Geld
+zöldség | Gemüse
+poggyász | Gepäck
+egyenesen | gerade (Richtung)
+éppen | gerade (zeitlich)
+egyenesen előre | geradeaus
+szívesen | gern
+bolt | Geschäft
+ajándék | Geschenk
+testvér | Geschwister
+nővér | Krankenschwester, ältere Schwester
+húg | jüngere Schwester
+báty | großer Bruder
+öcs | kleiner Bruder
+beszélgetés | Gespräch
+tegnap | gestern
+meghalt | gestorben
+ital | Getränk
+súly | Gewicht
+nyer | Gewinnen
+pohár | Glas (Behälter)
+hisz | glauben
+azonnal | gleich (zeitlich)
+ugyanolyan | dasselbe, das Gleiche (Vergleich)
+vágány | Gleis
+szerencse | Glück
+boldog | glücklick
+jókívánság | Glückwunsch
+fok | Grad
+gratulál | gratulieren
+grillez | grillen
+nagy | groß
+nagyság | Größe
+méret | Größe (Kleidung)
