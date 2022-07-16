@@ -68,12 +68,23 @@ class ModelMainWindow(Model):
 		
 		self.n_mistakes = 0
 		
-		self._printable_chars_positions = []	
+		self._printable_chars_positions = []
+	
+	
+	def increase_cur_entry(self):
+	
+		self.n_cur_entry += 1
+	
+	
+	def check_show_results_dialog(self):
+		
+		if self.n_cur_entry >= self.n_len_entries:
+			return True
+		else:
+			return False
 
 	
 	def next_word_pair(self):
-	
-		self.n_cur_entry += 1
 	
 		if self.n_cur_entry >= self.n_len_entries:
 			self.n_cur_entry = 0
